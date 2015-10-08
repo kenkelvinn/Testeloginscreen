@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/city_frame_01" />
+            <TextView
+                style="@style/ImageTitle"
+                android:text="@string/slide1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/city_frame_02"/>
+            <TextView
+                style="@style/ImageTitle"
+                android:text="@string/slide2" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/city_frame_03"/>
+            <TextView
+                style="@style/ImageTitle"
+                android:text="@string/slide3" />
+        </RelativeLayout>
+    </ViewFlipper>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:padding="40dp">
+
+        <EditText
+            android:hint="Usuário"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/edtNome"
+            android:background="#A0FFFFFF"
+            android:layout_margin="5dp"
+            android:padding="3dp"/>
+
+        <EditText
+            android:hint="Senha"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/edtSenha"
+            android:background="#A0FFFFFF"
+            android:layout_margin="5dp"
+            android:padding="3dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="@string/Register"
+            android:background="#00aced"
+            android:onClick="login"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="@string/login"
+            android:background="#00aced"
+            android:onClick="login"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:layout_margin="5dp"/>
+
+
+    </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:background="@drawable/fb_login_button"
+            android:text="@string/fblogin"
+            android:onClick="login"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:background="@drawable/gp_login_button"
+            android:text="@string/glogin"
+            android:onClick="login"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/swipe_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/swipe_left" />
+
+    <ImageView
+        android:id="@+id/swipe_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/swipe_right" />
+
+</RelativeLayout>
