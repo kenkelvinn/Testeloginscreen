@@ -50,13 +50,22 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = FirstFragment.newInstance(position + 1);
+                fragment = FragmentMapa.newInstance(position + 1);
                 break;
             case 1:
-                fragment = SecondFragment.newInstance(position + 1);
+                fragment = FragmentFiltros.newInstance(position + 1);
                 break;
             case 2:
-                fragment = ThirdFragment.newInstance(position + 1);
+                fragment = FragmentImoveis.newInstance(position + 1);
+                break;
+            case 3:
+                fragment = FragmentFavoritos.newInstance(position + 1);
+                break;
+            case 4:
+                fragment = FragmentOpinar.newInstance(position + 1);
+                break;
+            case 5:
+                fragment = FragmentSobre.newInstance(position + 1);
                 break;
         }
 
@@ -76,6 +85,15 @@ public class MainActivity extends AppCompatActivity
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
+                break;
+            case 4:
+                mTitle = getString(R.string.title_section4);
+                break;
+            case 5:
+                mTitle = getString(R.string.title_section5);
+                break;
+            case 6:
+                mTitle = getString(R.string.title_section6);
                 break;
         }
     }
@@ -123,11 +141,11 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    public static class FirstFragment extends Fragment {
+    public static class FragmentMapa extends Fragment {
 
         private static final String ARG_SECTION_NUMBER = "section_number";
-        public static FirstFragment newInstance(int sectionNumber) {
-            FirstFragment fragment = new FirstFragment();
+        public static FragmentMapa newInstance(int sectionNumber) {
+            FragmentMapa fragment = new FragmentMapa();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
@@ -135,12 +153,12 @@ public class MainActivity extends AppCompatActivity
         }
 
 
-        public FirstFragment() {
+        public FragmentMapa() {
         }
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.first_fragment, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_mapa, container, false);
             return rootView;
         }
 
@@ -152,22 +170,22 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    public static class SecondFragment extends Fragment {
+    public static class FragmentFiltros extends Fragment {
         private static final String ARG_SECTION_NUMBER = "section_number";
-        public static SecondFragment newInstance(int sectionNumber) {
-            SecondFragment fragment = new SecondFragment();
+        public static FragmentFiltros newInstance(int sectionNumber) {
+            FragmentFiltros fragment = new FragmentFiltros();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
             return fragment;
         }
 
-        public SecondFragment() {
+        public FragmentFiltros() {
         }
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.second_fragment, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_filtros, container, false);
             return rootView;
         }
         @Override
@@ -178,22 +196,103 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    public static class ThirdFragment extends Fragment {
+    public static class FragmentImoveis extends Fragment {
         private static final String ARG_SECTION_NUMBER = "section_number";
-        public static ThirdFragment newInstance(int sectionNumber) {
-            ThirdFragment fragment = new ThirdFragment();
+        public static FragmentImoveis newInstance(int sectionNumber) {
+            FragmentImoveis fragment = new FragmentImoveis();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
             return fragment;
         }
 
-        public ThirdFragment() {
+        public FragmentImoveis() {
         }
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_imoveis, container, false);
+            return rootView;
+        }
+        @Override
+        public void onAttach(Activity activity) {
+            super.onAttach(activity);
+            ((MainActivity) activity).onSectionAttached(
+                    getArguments().getInt(ARG_SECTION_NUMBER));
+        }
+    }
+
+    public static class FragmentFavoritos extends Fragment {
+        private static final String ARG_SECTION_NUMBER = "section_number";
+
+        public static FragmentFavoritos newInstance(int sectionNumber) {
+            FragmentFavoritos fragment = new FragmentFavoritos();
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            fragment.setArguments(args);
+            return fragment;
+        }
+
+        public FragmentFavoritos() {
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_favoritos, container, false);
+            return rootView;
+        }
+
+        @Override
+        public void onAttach(Activity activity) {
+            super.onAttach(activity);
+            ((MainActivity) activity).onSectionAttached(
+                    getArguments().getInt(ARG_SECTION_NUMBER));
+        }
+    }
+
+    public static class FragmentOpinar extends Fragment {
+        private static final String ARG_SECTION_NUMBER = "section_number";
+        public static FragmentOpinar newInstance(int sectionNumber) {
+            FragmentOpinar fragment = new FragmentOpinar();
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            fragment.setArguments(args);
+            return fragment;
+        }
+
+        public FragmentOpinar() {
+        }
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_opinar, container, false);
+            return rootView;
+        }
+        @Override
+        public void onAttach(Activity activity) {
+            super.onAttach(activity);
+            ((MainActivity) activity).onSectionAttached(
+                    getArguments().getInt(ARG_SECTION_NUMBER));
+        }
+    }
+
+    public static class FragmentSobre extends Fragment {
+        private static final String ARG_SECTION_NUMBER = "section_number";
+        public static FragmentSobre newInstance(int sectionNumber) {
+            FragmentSobre fragment = new FragmentSobre();
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            fragment.setArguments(args);
+            return fragment;
+        }
+
+        public FragmentSobre() {
+        }
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_sobre, container, false);
             return rootView;
         }
         @Override

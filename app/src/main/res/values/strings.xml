@@ -15,8 +15,12 @@
     <string name="location">location</string>
 
     <string name="title_section1">Mapa</string>
-    <string name="title_section2">Imóveis</string>
-    <string name="title_section3">Ajuda</string>
+    <string name="title_section2">Filtros</string>
+    <string name="title_section3">Imóveis</string>
+    <string name="title_section4">Favoritos</string>
+    <string name="title_section5">Opinar</string>
+    <string name="title_section6">Sobre</string>
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
