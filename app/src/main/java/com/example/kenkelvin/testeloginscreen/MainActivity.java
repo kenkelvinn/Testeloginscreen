@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = FragmentMapa.newInstance(position + 1);
+                fragment = MapsFragment.newInstance(position + 1);
                 break;
             case 1:
                 fragment = FragmentFiltros.newInstance(position + 1);
@@ -141,34 +141,34 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    public static class FragmentMapa extends Fragment {
-
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        public static FragmentMapa newInstance(int sectionNumber) {
-            FragmentMapa fragment = new FragmentMapa();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-
-        public FragmentMapa() {
-        }
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_mapa, container, false);
-            return rootView;
-        }
-
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
-    }
+//    public static class FragmentMapa extends Fragment {
+//
+//        private static final String ARG_SECTION_NUMBER = "section_number";
+//        public static FragmentMapa newInstance(int sectionNumber) {
+//            FragmentMapa fragment = new FragmentMapa();
+//            Bundle args = new Bundle();
+//            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+//            fragment.setArguments(args);
+//            return fragment;
+//        }
+//
+//
+//        public FragmentMapa() {
+//        }
+//        @Override
+//        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                                 Bundle savedInstanceState) {
+//            View rootView = inflater.inflate(R.layout.fragment_mapa, container, false);
+//            return rootView;
+//        }
+//
+//        @Override
+//        public void onAttach(Activity activity) {
+//            super.onAttach(activity);
+//            ((MainActivity) activity).onSectionAttached(
+//                    getArguments().getInt(ARG_SECTION_NUMBER));
+//        }
+//    }
 
     public static class FragmentFiltros extends Fragment {
         private static final String ARG_SECTION_NUMBER = "section_number";
