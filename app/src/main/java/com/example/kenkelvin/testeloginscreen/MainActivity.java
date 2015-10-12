@@ -153,8 +153,7 @@ public class MainActivity extends AppCompatActivity
 //        }
 //
 //
-//        public FragmentMapa() {
-//        }
+//
 //        @Override
 //        public View onCreateView(LayoutInflater inflater, ViewGroup container,
 //                                 Bundle savedInstanceState) {
