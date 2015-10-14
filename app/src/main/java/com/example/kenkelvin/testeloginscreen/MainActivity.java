@@ -1,6 +1,5 @@
 package com.example.kenkelvin.testeloginscreen;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -9,11 +8,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 
 public class MainActivity extends AppCompatActivity
@@ -53,19 +49,19 @@ public class MainActivity extends AppCompatActivity
                 fragment = MapsFragment.newInstance(position + 1);
                 break;
             case 1:
-                fragment = FragmentFiltros.newInstance(position + 1);
+                fragment = FiltrosFragment.newInstance(position + 1);
                 break;
             case 2:
-                fragment = FragmentImoveis.newInstance(position + 1);
+                fragment = DetalhesFragment.newInstance(position + 1);
                 break;
             case 3:
-                fragment = FragmentFavoritos.newInstance(position + 1);
+                fragment = FavoritosFragment.newInstance(position + 1);
                 break;
             case 4:
-                fragment = FragmentOpinar.newInstance(position + 1);
+                fragment = OpinarFragment.newInstance(position + 1);
                 break;
             case 5:
-                fragment = FragmentSobre.newInstance(position + 1);
+                fragment = SobreFragment.newInstance(position + 1);
                 break;
         }
 
@@ -140,166 +136,4 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-
-//    public static class FragmentMapa extends Fragment {
-//
-//        private static final String ARG_SECTION_NUMBER = "section_number";
-//        public static FragmentMapa newInstance(int sectionNumber) {
-//            FragmentMapa fragment = new FragmentMapa();
-//            Bundle args = new Bundle();
-//            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-//            fragment.setArguments(args);
-//            return fragment;
-//        }
-//
-//
-//
-//        @Override
-//        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                                 Bundle savedInstanceState) {
-//            View rootView = inflater.inflate(R.layout.fragment_mapa, container, false);
-//            return rootView;
-//        }
-//
-//        @Override
-//        public void onAttach(Activity activity) {
-//            super.onAttach(activity);
-//            ((MainActivity) activity).onSectionAttached(
-//                    getArguments().getInt(ARG_SECTION_NUMBER));
-//        }
-//    }
-
-    public static class FragmentFiltros extends Fragment {
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        public static FragmentFiltros newInstance(int sectionNumber) {
-            FragmentFiltros fragment = new FragmentFiltros();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public FragmentFiltros() {
-        }
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_filtros, container, false);
-            return rootView;
-        }
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
-    }
-
-    public static class FragmentImoveis extends Fragment {
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        public static FragmentImoveis newInstance(int sectionNumber) {
-            FragmentImoveis fragment = new FragmentImoveis();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public FragmentImoveis() {
-        }
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_imoveis, container, false);
-            return rootView;
-        }
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
-    }
-
-    public static class FragmentFavoritos extends Fragment {
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        public static FragmentFavoritos newInstance(int sectionNumber) {
-            FragmentFavoritos fragment = new FragmentFavoritos();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public FragmentFavoritos() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_favoritos, container, false);
-            return rootView;
-        }
-
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
-    }
-
-    public static class FragmentOpinar extends Fragment {
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        public static FragmentOpinar newInstance(int sectionNumber) {
-            FragmentOpinar fragment = new FragmentOpinar();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public FragmentOpinar() {
-        }
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_opinar, container, false);
-            return rootView;
-        }
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
-    }
-
-    public static class FragmentSobre extends Fragment {
-        private static final String ARG_SECTION_NUMBER = "section_number";
-        public static FragmentSobre newInstance(int sectionNumber) {
-            FragmentSobre fragment = new FragmentSobre();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public FragmentSobre() {
-        }
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_sobre, container, false);
-            return rootView;
-        }
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
-    }
-
 }
