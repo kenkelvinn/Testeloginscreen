@@ -88,7 +88,7 @@ public class loginActivity extends Activity {
     }
 
     public void cadastro(View v){
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, CadastroActivity.class);
         startActivity(i);
         finish();
     }

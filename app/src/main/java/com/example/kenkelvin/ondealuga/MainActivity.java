@@ -58,9 +58,6 @@ public class MainActivity extends AppCompatActivity
                 fragment = FavoritosFragment.newInstance(position + 1);
                 break;
             case 4:
-                fragment = OpinarFragment.newInstance(position + 1);
-                break;
-            case 5:
                 fragment = SobreFragment.newInstance(position + 1);
                 break;
         }
@@ -87,9 +84,6 @@ public class MainActivity extends AppCompatActivity
                 break;
             case 5:
                 mTitle = getString(R.string.title_section5);
-                break;
-            case 6:
-                mTitle = getString(R.string.title_section6);
                 break;
         }
     }

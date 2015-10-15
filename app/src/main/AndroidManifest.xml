@@ -41,8 +41,7 @@
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:name=".CadastroActivity"
-            android:label="@string/title_activity_cadastro" >
+            android:name=".CadastroActivity" >
         </activity>
     </application>
 

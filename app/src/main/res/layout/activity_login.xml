@@ -71,6 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:id="@+id/edtNome"
+            android:inputType="textEmailAddress"
             android:background="#A0FFFFFF"
             android:layout_margin="5dp"
             android:padding="3dp"/>
@@ -80,6 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:id="@+id/edtSenha"
+            android:inputType="textPassword"
             android:background="#A0FFFFFF"
             android:layout_margin="5dp"
             android:padding="3dp"/>
