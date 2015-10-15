@@ -67,7 +67,7 @@
         android:padding="40dp">
 
         <EditText
-            android:hint="Usuário"
+            android:hint="@string/hint_user"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:id="@+id/edtNome"
@@ -76,7 +76,7 @@
             android:padding="3dp"/>
 
         <EditText
-            android:hint="Senha"
+            android:hint="@string/hint_pass"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:id="@+id/edtSenha"
@@ -96,7 +96,7 @@
             android:layout_height="45dp"
             android:text="@string/Register"
             android:background="#00aced"
-            android:onClick="login"
+            android:onClick="cadastro"
             android:textColor="#FFFFFF"
             android:textSize="18dp"
             android:layout_margin="5dp"/>

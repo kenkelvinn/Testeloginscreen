@@ -1,27 +1,17 @@
-package com.example.kenkelvin.testeloginscreen;
+package com.example.kenkelvin.ondealuga;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.drawable.AnimationDrawable;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
-
-import java.util.Vector;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
 
 public class loginActivity extends Activity {
@@ -40,39 +30,15 @@ public class loginActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        // tentativa 1
-
-        //final ImageView animImageViewCity = (ImageView) findViewById(R.id.ivAnimationCity);
-        //animImageViewCity.setBackgroundResource(R.drawable.anim_city);
-        //animImageViewCity.post(new Runnable() {
-        //    @Override
-        //    public void run() {
-        //        AnimationDrawable frameAnimation =
-        //                (AnimationDrawable) animImageViewCity.getBackground();
-        //        frameAnimation.start();
-        //    }
-        //});
-
-        // tentativa 2
-
-        //ImageView img = (ImageView)findViewById(R.id.ivAnimationCity);
-        //img.setBackgroundResource(R.drawable.anim_city);
-        //AnimationDrawable frameAnimation = (AnimationDrawable) img.getBackground();
-        //frameAnimation.start();
-
         edtNome = (EditText) findViewById(R.id.edtNome);
-
-        //sp = getSharedPreferences("prefs", MODE_PRIVATE);
         sp = PreferenceManager.getDefaultSharedPreferences(this);
         spEdit = sp.edit();
 
-        //edtNome.setText( sp.getString("nome", "") );
-        if (sp.contains("access_token")){
-            Intent i = new Intent(this, MainActivity.class);
-            startActivity(i);
-            finish();
-        }
+//        if (sp.contains("access_token")){
+//            Intent i = new Intent(this, MainActivity.class);
+//            startActivity(i);
+//            finish();
+//        }
 
         mContext = this;
         mViewFlipper = (ViewFlipper) this.findViewById(R.id.view_flipper);
@@ -121,6 +87,10 @@ public class loginActivity extends Activity {
         finish();
     }
 
-
+    public void cadastro(View v){
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        finish();
+    }
 
 }

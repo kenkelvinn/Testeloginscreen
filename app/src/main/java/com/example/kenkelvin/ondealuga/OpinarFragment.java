@@ -1,4 +1,4 @@
-package com.example.kenkelvin.testeloginscreen;
+package com.example.kenkelvin.ondealuga;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,27 +9,24 @@ import android.view.ViewGroup;
 /**
  * Created by KenKelvin on 13/10/2015.
  */
-public class FavoritosFragment extends android.support.v4.app.Fragment{
+public class OpinarFragment extends android.support.v4.app.Fragment{
     private static final String ARG_SECTION_NUMBER = "section_number";
-
-    public static FavoritosFragment newInstance(int sectionNumber) {
-        FavoritosFragment fragment = new FavoritosFragment();
+    public static OpinarFragment newInstance(int sectionNumber) {
+        OpinarFragment fragment = new OpinarFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
         return fragment;
     }
 
-    public FavoritosFragment() {
+    public OpinarFragment() {
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_favoritos, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_opinar, container, false);
         return rootView;
     }
-
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);

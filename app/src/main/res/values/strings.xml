@@ -9,14 +9,25 @@
     <string name="fblogin">Sign in with Facabook</string>
     <string name="glogin">Sign in with G+</string>
     <string name="login">Login</string>
+    <string name="hint_user">Usuário</string>
+    <string name="hint_pass">Senha</string>
     <string name="Register">Register</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="location">location</string>
 
+    <string name="instrucoes">Preencha as informações se cadastrar</string>
+    <string name="hint_first">Nome</string>
+    <string name="hint_last">Sobrenome</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="data">Data de Aniversário</string>
+    <string name="btn_cadastre">Cadastre-se</string>
+    <string name="observacao">Nunca publicaremos no facebook sem sua permissão</string>
+
     <string name="title_section1">Mapa</string>
     <string name="title_section2">Filtros</string>
-    <string name="title_section3">Imóveis</string>
+    <string name="title_section3">Detalhes</string>
     <string name="title_section4">Favoritos</string>
     <string name="title_section5">Opinar</string>
     <string name="title_section6">Sobre</string>
@@ -26,5 +37,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_example">Example action</string>
+    <string name="title_activity_cadastro">CadastroActivity</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

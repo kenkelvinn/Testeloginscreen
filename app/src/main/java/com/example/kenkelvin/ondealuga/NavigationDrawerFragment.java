@@ -1,4 +1,4 @@
-package com.example.kenkelvin.testeloginscreen;
+package com.example.kenkelvin.ondealuga;
 
 import android.support.v7.app.AppCompatActivity;
 import android.app.Activity;
@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 public class NavigationDrawerFragment extends Fragment {
@@ -183,7 +184,6 @@ public class NavigationDrawerFragment extends Fragment {
             }
         });
 
-        mDrawerToggle.setDrawerIndicatorEnabled(true);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
     }
 
@@ -273,6 +273,5 @@ public class NavigationDrawerFragment extends Fragment {
          */
         void onNavigationDrawerItemSelected(int position);
     }
-
 
 }

@@ -1,4 +1,4 @@
-package com.example.kenkelvin.testeloginscreen;
+package com.example.kenkelvin.ondealuga;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -20,16 +19,14 @@ import com.google.android.gms.maps.model.MarkerOptions;
  */
 public class MapsFragment extends android.support.v4.app.Fragment{
 
-
-    public MapView mapView;
-    private static GoogleMap googleMap;
+    public static GoogleMap googleMap;
 
     @Override
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_mapa, container, false);
-            googleMap = ((MapFragment) getActivity().getFragmentManager().findFragmentById(R.id.MapView)).getMap();
+            googleMap = ((MapFragment) getActivity().getFragmentManager().findFragmentById(R.id.ViewMap)).getMap();
             if (googleMap != null) {
                 setUpMap();
             }
@@ -51,7 +48,8 @@ public class MapsFragment extends android.support.v4.app.Fragment{
         BitmapDescriptor ic_condominium = BitmapDescriptorFactory.fromResource(R.drawable.ic_condominium);
         BitmapDescriptor ic_office_building = BitmapDescriptorFactory.fromResource(R.drawable.ic_office_building);
         BitmapDescriptor ic_townhouse = BitmapDescriptorFactory.fromResource(R.drawable.ic_townhouse);
-        googleMap.setMyLocationEnabled(true);
+        googleMap.getUiSettings().setZoomControlsEnabled(true);
+        googleMap.getUiSettings().setMyLocationButtonEnabled(true);
         googleMap.setMyLocationEnabled(true);
         googleMap.setBuildingsEnabled(true);
         googleMap.setTrafficEnabled(true);
@@ -115,7 +113,7 @@ public class MapsFragment extends android.support.v4.app.Fragment{
         super.onDestroyView();
         if (googleMap != null) {
             getActivity().getFragmentManager().beginTransaction()
-                    .remove(getActivity().getFragmentManager().findFragmentById(R.id.MapView))
+                    .remove(getActivity().getFragmentManager().findFragmentById(R.id.ViewMap))
                     .commit();
             googleMap = null;
         }

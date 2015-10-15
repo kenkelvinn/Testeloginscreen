@@ -1,4 +1,4 @@
-package com.example.kenkelvin.testeloginscreen;
+package com.example.kenkelvin.ondealuga;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
