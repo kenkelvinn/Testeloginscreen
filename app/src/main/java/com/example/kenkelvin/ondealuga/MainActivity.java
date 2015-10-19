@@ -124,7 +124,6 @@ public class MainActivity extends AppCompatActivity
             spEdit.commit();
             Intent intent = new Intent(this, loginActivity.class);
             startActivity(intent);
-            finish();
             return true;
         }
 
